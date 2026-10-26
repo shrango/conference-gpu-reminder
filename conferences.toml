@@ -1,0 +1,54 @@
+# ============ GPU 申请规则 ============
+[settings]
+lead_days = 15               # 申请至少提前多少天
+align_submission = true      # true = 提交截止也对齐到 1号/15号（11/1 生效 → 10/15 前提交）
+                             # false = 严格按“生效日 - 15 天”（11/1 生效 → 10/17 前提交）
+deadline_basis = "paper"     # 截稿前 15 天按哪个截止日算："paper"（full submission）或 "abstract"
+deadline_buffer_days = 15    # 截稿前多少天必须已经有 GPU
+rebuttal_buffer_days = 0     # rebuttal 开始前多少天必须已经有 GPU
+remind_offsets = [7, 3]      # 距离“提交 GPU 申请截止”还剩几天时提醒
+timezone = "America/Chicago" # 判断“今天”用的时区（GitHub Actions 默认是 UTC）
+
+# ============ 会议日期 ============
+# abstract / paper / rebuttal 都是可选的（如 ARR 没有 abstract，就不写）
+# estimated = true 表示官方尚未公布、按往年推算；官方公布后请更新日期并改成 false
+
+[[conferences]]
+name = "ARR 2027 Jan cycle"
+paper = 2027-01-05
+rebuttal = 2027-02-15
+estimated = true
+note = "很可能是 ACL 2027 的最后一个 cycle"
+url = "https://aclrollingreview.org/dates"
+
+[[conferences]]
+name = "ICML 2027"
+abstract = 2027-01-16
+paper = 2027-01-22
+rebuttal = 2027-03-24
+estimated = true
+url = "https://icml.cc"
+
+[[conferences]]
+name = "COLM 2027"
+abstract = 2027-03-26
+paper = 2027-03-31
+rebuttal = 2027-05-21
+estimated = true
+url = "https://colmweb.org"
+
+[[conferences]]
+name = "NeurIPS 2027"
+abstract = 2027-05-04
+paper = 2027-05-06
+rebuttal = 2027-07-26
+estimated = true
+url = "https://neurips.cc"
+
+[[conferences]]
+name = "ICLR 2028"
+abstract = 2027-09-17
+paper = 2027-09-24
+rebuttal = 2027-11-04
+estimated = true
+url = "https://iclr.cc"
